@@ -16,6 +16,7 @@ def process_img(image):
 def run():
     while True:
         sct = mss()
+        #change the "top" "left" "width" and "height" to your choosings
         monitor = {"top": 469, "left": 13, "width": 485, "height": 17}
         img = np.array(sct.grab(monitor))
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
